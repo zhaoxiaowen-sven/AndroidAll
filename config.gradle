@@ -1,0 +1,6 @@
+ext {
+    dependencies = [
+            AROUTER_API     : 'com.alibaba:arouter-api:1.5.1',
+            AROUTER_COMPILER: 'com.alibaba:arouter-compiler:1.5.1',
+    ]
+}
