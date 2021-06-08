@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".handler.HandlerActivity" />
+        <activity android:name=".ipc.ClientActivity" />
+        <activity android:name=".ams.AmsActivity" />
+
+        <service android:name=".ipc.RemoteService" android:process=":remote" />
     </application>
 
 </manifest>
