@@ -1,5 +1,6 @@
 package com.sven.androidall.handler;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -24,7 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * Created by zhaoxiaowen on 2021/2/27
  */
 @Route(path = RouteConstants.HANDLER_PAGE)
-public class HandlerActivity extends AppCompatActivity {
+public class HandlerActivity extends Activity {
     private static final String TAG = "HandlerActivityImpl";
 
     private Button mButton;

@@ -5,4 +5,5 @@ package com.sven.androidall.contants;
  */
 public class RouteConstants {
     public static final String HANDLER_PAGE = "/hanlder/activity";
+    public static final String EVENT_PAGE = "/view/eventActivity";
 }

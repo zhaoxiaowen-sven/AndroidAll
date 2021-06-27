@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 
-import static com.sven.androidall.contants.RouteConstants.HANDLER_PAGE;
+import static com.sven.androidall.contants.RouteConstants.EVENT_PAGE;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -21,7 +21,8 @@ public class LaunchActivity extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build(HANDLER_PAGE).navigation();
+//                ARouter.getInstance().build(HANDLER_PAGE).navigation();
+                ARouter.getInstance().build(EVENT_PAGE).navigation();
             }
         });
     }
