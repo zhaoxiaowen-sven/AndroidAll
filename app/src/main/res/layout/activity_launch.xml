@@ -12,4 +12,12 @@
         android:layout_height="wrap_content"
         android:text="handler_button1" />
 
+
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
