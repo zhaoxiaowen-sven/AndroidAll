@@ -36,4 +36,5 @@ dependencies {
 
     api rootProject.ext.dependencies.AROUTER_API
     annotationProcessor rootProject.ext.dependencies.AROUTER_COMPILER
+//    implementation group: 'androidx.lifecycle', name: 'lifecycle-extensions', version: '2.0.0-alpha1'
 }
