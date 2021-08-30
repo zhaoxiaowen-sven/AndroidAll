@@ -23,6 +23,7 @@
         <activity android:name=".ams.AmsActivity" />
         <activity android:name=".view.ViewEventActivity" />
         <activity android:name=".jetpack.MyActivity" />
+        <activity android:name=".aop.AOPActivity" />
 
         <service android:name=".ipc.RemoteService" android:process=":remote" />
     </application>

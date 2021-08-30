@@ -1,2 +1,5 @@
+include ':apt-api'
+include ':apt-compiler'
+include ':apt-annotation'
 rootProject.name='AndroidAll'
 include ':app'
