@@ -1,0 +1,54 @@
+apply plugin: 'java-gradle-plugin'
+//apply plugin: 'groovy'
+//apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+//定义资源位置
+sourceSets {
+    main {
+//        groovy {
+//            srcDir 'src/main/groovy'
+//        }
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.ow2.asm:asm:7.0"
+    implementation "org.ow2.asm:asm-commons:7.0"
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:3.6.3'
+    implementation localGroovy()
+}
+
+//指定上传的地址和插件id,版本
+//需要上传之后才可以给其他工程当做插件使用
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            pom.groupId = 'com.sven.android'
+//            pom.artifactId = 'asmplugin'
+//            pom.version = '0.0.1'
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}
+
+afterEvaluate {
+    publishing {
+        publications {
+            official(MavenPublication) {
+                groupId = 'com.sven.andorid'
+                artifactId = 'asmplugin'
+                version = '0.0.1'
+                from components.java
+            }
+        }
+    }
+}
+
