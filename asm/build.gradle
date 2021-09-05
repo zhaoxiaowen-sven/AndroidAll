@@ -43,7 +43,7 @@ afterEvaluate {
     publishing {
         publications {
             official(MavenPublication) {
-                groupId = 'com.sven.andorid'
+                groupId = 'com.sven.android'
                 artifactId = 'asmplugin'
                 version = '0.0.1'
                 from components.java

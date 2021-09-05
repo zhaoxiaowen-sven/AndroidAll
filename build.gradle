@@ -6,12 +6,12 @@ buildscript {
         kotlin_version = '1.3.72'
     }
     repositories {
-        maven{
-            url uri('repo')
-        }
+//        maven{
+//            url uri('repo')
+//        }
         mavenLocal()
         google()
-//        mavenCentral()
+        mavenCentral()
         jcenter()
 
     }
@@ -30,7 +30,7 @@ allprojects {
     repositories {
         mavenLocal()
         google()
-//        mavenCentral()
+        mavenCentral()
         jcenter()
     }
 }

@@ -8,9 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.sven.androidall.asm.InjectTest;
 
-import static com.sven.androidall.contants.RouteConstants.AOP;
+import static com.sven.androidall.contants.RouteConstants.ASM;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -31,9 +30,8 @@ public class LaunchActivity extends AppCompatActivity {
 //                ARouter.getInstance().build(EVENT_PAGE).navigation();
 //                ARouter.getInstance().build(LIFE_CYCLE).navigation();
 //                ARouter.getInstance().build(AOP).navigation();
+                ARouter.getInstance().build(ASM).navigation();
 
-                InjectTest injectTest=new InjectTest();
-                injectTest.sayHello();
             }
         });
 
