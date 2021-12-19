@@ -1,5 +1,8 @@
 package com.sven.androidall;
 
+import static com.sven.androidall.contants.RouteConstants.COROUTINE;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-
-import static com.sven.androidall.contants.RouteConstants.ASM;
+import com.sven.androidall.coroutine.CoroutineActivity;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -30,7 +32,11 @@ public class LaunchActivity extends AppCompatActivity {
 //                ARouter.getInstance().build(EVENT_PAGE).navigation();
 //                ARouter.getInstance().build(LIFE_CYCLE).navigation();
 //                ARouter.getInstance().build(AOP).navigation();
-                ARouter.getInstance().build(ASM).navigation();
+//                ARouter.getInstance().build(ASM).navigation();
+//                ARouter.getInstance().build(COROUTINE).navigation();
+
+                Intent intent = new Intent(LaunchActivity.this, CoroutineActivity.class);
+                startActivity(intent);
 
             }
         });

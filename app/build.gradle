@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'com.alibaba.arouter'
 apply plugin: 'com.sven.android.plugin'
 android {
@@ -26,6 +28,15 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    kotlinOp
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -38,10 +49,33 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies.AROUTER_COMPILER
     annotationProcessor project(':apt-compiler')
     implementation project(':apt-api')
-//    implementation group: 'androidx.lifecycle', name: 'lifecycle-extensions', version: '2.0.0-alpha1'
+
     // debugImplementation because LeakCanary should only run in debug builds.
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    debugImplementation rootProject.ext.dependencies.LEAKCANARY
+    releaseImplementation rootProject.ext.dependencies.LEAKCANARY_DEBUG
     // Optional, if you use support library fragments:
-    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+    debugImplementation rootProject.ext.dependencies.LEAKCANARY_FRAGMENT
+    implementation rootProject.ext.dependencies.COROUTINES_CORE
+    implementation rootProject.ext.dependencies.COROUTINES_ANDROID
+
+    // ViewModel
+    implementation rootProject.ext.dependencies.VIEWMODEL
+    // ViewModel utilities for Compose
+    implementation rootProject.ext.dependencies.COMPOSE
+    // LiveData
+    implementation rootProject.ext.dependencies.LIVEDATA
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation rootProject.ext.dependencies.RUNTIME_KTX
+    // Saved state module for ViewModel
+    implementation rootProject.ext.dependencies.SAVEDSTATE
+    // optional - helpers for implementing LifecycleOwner in a Service
+    implementation rootProject.ext.dependencies.LIFECYCLE_SERVICE
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation rootProject.ext.dependencies.LIFECYCLE_PROCESS
+    kapt rootProject.ext.dependencies.LIFECYCLE_COMPILER
+    implementation rootProject.ext.dependencies.RETROFIT
+    implementation rootProject.ext.dependencies.CONVERTER_GSON
+}
+repositories {
+    mavenCentral()
 }

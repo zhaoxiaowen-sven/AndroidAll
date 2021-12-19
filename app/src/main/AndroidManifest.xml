@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sven.androidall">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".BaseApplication"
         android:allowBackup="false"
@@ -16,17 +17,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".handler.HandlerActivity"
-            android:theme="@style/TextAppearance.AppCompat"
-            />
+        <activity
+            android:name=".handler.HandlerActivity"
+            android:theme="@style/TextAppearance.AppCompat" />
         <activity android:name=".ipc.ClientActivity" />
         <activity android:name=".ams.AmsActivity" />
         <activity android:name=".view.ViewEventActivity" />
         <activity android:name=".jetpack.MyActivity" />
         <activity android:name=".aop.AOPActivity" />
         <activity android:name=".asm.AsmActivity" />
+        <activity android:name=".coroutine.CoroutineActivity" />
 
-        <service android:name=".ipc.RemoteService" android:process=":remote" />
+        <service
+            android:name=".ipc.RemoteService"
+            android:process=":remote" />
     </application>
 
 </manifest>

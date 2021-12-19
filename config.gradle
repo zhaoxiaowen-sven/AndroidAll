@@ -1,6 +1,37 @@
 ext {
+    versions = [
+            LIFECYCLE_VERSION: "2.4.0",
+            ARCH_VERSION     : "2.1.0",
+            RETROFIT         : "2.9.0"
+    ]
     dependencies = [
-            AROUTER_API     : 'com.alibaba:arouter-api:1.5.1',
-            AROUTER_COMPILER: 'com.alibaba:arouter-compiler:1.5.1',
+            AROUTER_API        : 'com.alibaba:arouter-api:1.5.1',
+            AROUTER_COMPILER   : 'com.alibaba:arouter-compiler:1.5.1',
+            LEAKCANARY_FRAGMENT: 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1',
+            LEAKCANARY         : 'com.squareup.leakcanary:leakcanary-android:1.6.1',
+            LEAKCANARY_DEBUG   : 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1',
+            COROUTINES_CORE    : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC3',
+            COROUTINES_ANDROID : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-RC3',
+            // ViewModel
+            VIEWMODEL          : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.LIFECYCLE_VERSION}",
+            // ViewModel utilities for Compose
+            COMPOSE            : "androidx.lifecycle:lifecycle-viewmodel-compose:${versions.LIFECYCLE_VERSION}",
+            // LiveData
+            LIVEDATA           : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.LIFECYCLE_VERSION}",
+            // Lifecycles only (without ViewModel or LiveData)
+            RUNTIME_KTX        : "androidx.lifecycle:lifecycle-runtime-ktx:${versions.LIFECYCLE_VERSION}",
+            // Saved state module for ViewModel
+            SAVEDSTATE         : "androidx.lifecycle:lifecycle-viewmodel-savedstate:${versions.LIFECYCLE_VERSION}",
+            // Annotation processor
+            LIFECYCLE_COMPILER : "androidx.lifecycle:lifecycle-compiler:${versions.LIFECYCLE_VERSION}",
+            // alternately - if using Java8, use the following instead of lifecycle-compiler
+            LIFECYCLE_JAVA8    : "androidx.lifecycle:lifecycle-common-java8:${versions.LIFECYCLE_VERSION}",
+            // optional - helpers for implementing LifecycleOwner in a Service
+            LIFECYCLE_SERVICE  : "androidx.lifecycle:lifecycle-service:${versions.LIFECYCLE_VERSION}",
+            // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+            LIFECYCLE_PROCESS  : "androidx.lifecycle:lifecycle-process:${versions.LIFECYCLE_VERSION}",
+
+            RETROFIT           : "com.squareup.retrofit2:retrofit:${versions.RETROFIT}",
+            CONVERTER_GSON     : "com.squareup.retrofit2:converter-gson:${versions.RETROFIT}"
     ]
 }
