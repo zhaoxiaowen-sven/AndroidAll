@@ -4,6 +4,8 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.sven.androidall.R
 import com.sven.androidall.contants.RouteConstants
@@ -14,7 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @Route(path = RouteConstants.COROUTINE)
-class CoroutineActivity : Activity() {
+class CoroutineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coroutine)
@@ -31,5 +33,6 @@ class CoroutineActivity : Activity() {
                 }
             }
         })
+        lifecycleScope
     }
 }
