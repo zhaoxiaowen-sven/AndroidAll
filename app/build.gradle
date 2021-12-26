@@ -45,6 +45,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
     api rootProject.ext.dependencies.AROUTER_API
     annotationProcessor rootProject.ext.dependencies.AROUTER_COMPILER
     annotationProcessor project(':apt-compiler')

@@ -2,7 +2,8 @@ ext {
     versions = [
             LIFECYCLE_VERSION: "2.4.0",
             ARCH_VERSION     : "2.1.0",
-            RETROFIT         : "2.9.0"
+            RETROFIT         : "2.9.0",
+            ANDRDIDX_VER     : "1.4.0"
     ]
     dependencies = [
             AROUTER_API        : 'com.alibaba:arouter-api:1.5.1',
@@ -32,6 +33,10 @@ ext {
             LIFECYCLE_PROCESS  : "androidx.lifecycle:lifecycle-process:${versions.LIFECYCLE_VERSION}",
 
             RETROFIT           : "com.squareup.retrofit2:retrofit:${versions.RETROFIT}",
-            CONVERTER_GSON     : "com.squareup.retrofit2:converter-gson:${versions.RETROFIT}"
+            CONVERTER_GSON     : "com.squareup.retrofit2:converter-gson:${versions.RETROFIT}",
+
+            ANDROIDX_ACTIVITY  : "androidx.activity:activity-ktx:${versions.ANDRDIDX_VER}",
+            ANDROIDX_FRAGMENT  : "androidx.fragment:fragment-ktx:${versions.ANDRDIDX_VER}"
     ]
+
 }
