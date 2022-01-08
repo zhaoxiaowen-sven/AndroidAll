@@ -103,9 +103,9 @@ class CoroutineTest01 {
             println("exceptionHandler ${coroutineContext[CoroutineName]} $throwable")
         }
         val coroutineScope = CoroutineScope(SupervisorJob() +CoroutineName("coroutineScope"))
-        GlobalScope.launch(Dispatchers.Main + CoroutineName("scope1") + exceptionHandler) {
+        GlobalScope.launch(Dispatchers.Main + CoroutineName("scope1") + exceptionHandler, start = CoroutineStart.UNDISPATCHED) {
            with(coroutineScope) {
-                val scope2 = launch(CoroutineName("scope2") + exceptionHandler) {
+                val scope2 = launch( CoroutineName("scope2") + exceptionHandler) {
                     println("scope 1--------- ${coroutineContext[CoroutineName]}")
                     throw  NullPointerException("空指针")
                 }

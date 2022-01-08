@@ -81,6 +81,8 @@ dependencies {
     kapt rootProject.ext.dependencies.LIFECYCLE_COMPILER
     implementation rootProject.ext.dependencies.RETROFIT
     implementation rootProject.ext.dependencies.CONVERTER_GSON
+    implementation rootProject.ext.dependencies.RECYCLERVIEW
+
 }
 repositories {
     mavenCentral()

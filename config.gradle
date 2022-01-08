@@ -1,9 +1,10 @@
 ext {
     versions = [
-            LIFECYCLE_VERSION: "2.4.0",
-            ARCH_VERSION     : "2.1.0",
-            RETROFIT         : "2.9.0",
-            ANDRDIDX_VER     : "1.4.0"
+            LIFECYCLE_VERSION : "2.4.0",
+            ARCH_VERSION      : "2.1.0",
+            RETROFIT          : "2.9.0",
+            ANDRDIDX_VER      : "1.4.0",
+            COROUTINES_VERSION: "1.6.0"
     ]
     dependencies = [
             AROUTER_API        : 'com.alibaba:arouter-api:1.5.1',
@@ -11,8 +12,10 @@ ext {
             LEAKCANARY_FRAGMENT: 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1',
             LEAKCANARY         : 'com.squareup.leakcanary:leakcanary-android:1.6.1',
             LEAKCANARY_DEBUG   : 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1',
-            COROUTINES_CORE    : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC3',
-            COROUTINES_ANDROID : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-RC3',
+
+            // COROUTINES
+            COROUTINES_CORE    : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.COROUTINES_VERSION}',
+            COROUTINES_ANDROID : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.COROUTINES_VERSION}',
             // ViewModel
             VIEWMODEL          : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.LIFECYCLE_VERSION}",
             // ViewModel utilities for Compose
@@ -36,7 +39,9 @@ ext {
             CONVERTER_GSON     : "com.squareup.retrofit2:converter-gson:${versions.RETROFIT}",
 
             ANDROIDX_ACTIVITY  : "androidx.activity:activity-ktx:${versions.ANDRDIDX_VER}",
-            ANDROIDX_FRAGMENT  : "androidx.fragment:fragment-ktx:${versions.ANDRDIDX_VER}"
+            ANDROIDX_FRAGMENT  : "androidx.fragment:fragment-ktx:${versions.ANDRDIDX_VER}",
+
+            RECYCLERVIEW       : "androidx.recyclerview:recyclerview:1.2.1"
     ]
 
 }
