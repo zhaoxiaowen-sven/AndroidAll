@@ -82,6 +82,8 @@ dependencies {
     implementation rootProject.ext.dependencies.RETROFIT
     implementation rootProject.ext.dependencies.CONVERTER_GSON
     implementation rootProject.ext.dependencies.RECYCLERVIEW
+    implementation rootProject.ext.dependencies.GLIDE
+    implementation rootProject.ext.dependencies.GLIDE_P
 
 }
 repositories {
