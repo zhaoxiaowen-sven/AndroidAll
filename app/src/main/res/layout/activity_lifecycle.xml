@@ -7,7 +7,7 @@
     tools:context=".LaunchActivity">
 
     <Button
-        android:id="@+id/toHandler"
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LifeCycle" />

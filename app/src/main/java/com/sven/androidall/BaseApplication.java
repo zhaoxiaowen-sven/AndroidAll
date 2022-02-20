@@ -16,7 +16,7 @@ public class BaseApplication extends Application {
             return;
         }
         LeakCanary.install(this);
-
+        LeakCanary.enableDisplayLeakActivity(this);
         ARouter.init(this);
     }
 }
