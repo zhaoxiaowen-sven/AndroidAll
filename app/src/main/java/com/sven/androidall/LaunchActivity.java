@@ -6,12 +6,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sven.androidall.leak.LeakUtils;
+
+import java.io.IOException;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.internal.cache.CacheRequest;
+import okhttp3.internal.cache.CacheStrategy;
+import okhttp3.internal.cache.InternalCache;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -40,6 +50,8 @@ public class LaunchActivity extends AppCompatActivity {
 //                startActivity(intent);
 //                loadImage();
 
+
+                OkHttpClient client = new OkHttpClient.Builder().cache(new CacheImpl())
                 LeakUtils.getInstance(LaunchActivity.this);
             }
         });
@@ -75,5 +87,39 @@ public class LaunchActivity extends AppCompatActivity {
                 .priority(Priority.HIGH)
 
                 .into(mImageView);
+    }
+
+    private class CacheImpl implements InternalCache {
+        @Nullable
+        @Override
+        public Response get(Request request) throws IOException {
+            return null;
+        }
+
+        @Nullable
+        @Override
+        public CacheRequest put(Response response) throws IOException {
+            return null;
+        }
+
+        @Override
+        public void remove(Request request) throws IOException {
+
+        }
+
+        @Override
+        public void update(Response cached, Response network) {
+
+        }
+
+        @Override
+        public void trackConditionalCacheHit() {
+
+        }
+
+        @Override
+        public void trackResponse(CacheStrategy cacheStrategy) {
+
+        }
     }
 }
